@@ -1,0 +1,41 @@
+$(".sub").slideUp(0)
+$(".sub_li").slideUp(0)
+
+$(".menu1_wrap").find(".sub").slideDown(0);
+$(".sub_li").eq(0).slideDown(0)
+$(".arrow1").eq(0).addClass("active")
+$(".arrow2").eq(0).addClass("active")
+
+$(".menu").eq(0).click(function(){
+  $(".menu1_wrap").find(".sub").stop().slideToggle();
+  $(".sub").not($(".menu1_wrap").find(".sub")).stop().slideUp();
+  $(".sub_li").stop().slideUp();
+  $(this).find(".arrow1").toggleClass("active");
+  $(".arrow1").not($(this).find(".arrow1")).removeClass("active");
+  $(".arrow2").removeClass("active");
+})
+
+$(".menu").eq(1).click(function(){
+  $(".sub_li").eq(4).stop().slideToggle();
+  $(".sub_li").not($(".sub_li").eq(4)).stop().slideUp();
+  $(".sub").stop().slideUp();
+  $(this).find(".arrow1").toggleClass("active");
+  $(".arrow1").not($(this).find(".arrow1")).removeClass("active");
+  $(".arrow2").removeClass("active");
+})
+$(".menu").eq(2).click(function(){
+  $(".sub_li").eq(5).stop().slideToggle();
+  $(".sub_li").not($(".sub_li").eq(5)).stop().slideUp();
+  $(".sub").stop().slideUp();
+  $(this).find(".arrow1").toggleClass("active");
+  $(".arrow1").not($(this).find(".arrow1")).removeClass("active");
+  $(".arrow2").removeClass("active");
+})
+$(".sub").click(function(){
+  inx=$(this).index();
+  console.log(inx/2);
+  $(".sub_li").eq(inx/2).stop().slideToggle();
+  $(".sub_li").not($(".sub_li").eq(inx/2)).stop().slideUp();
+  $(".arrow2").toggleClass("active");
+  $(".arrow2").not($(this).find(".arrow2")).removeClass("active");
+})
