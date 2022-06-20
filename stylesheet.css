@@ -1,0 +1,603 @@
+@font-face {
+  font-family: 'PyeongChangPeace-Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333333;
+}
+ul, ol, li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+h1::selection, 
+h2::selection, 
+h3::selection, 
+br::selection, 
+p::selection, 
+span::selection, 
+a::selection, 
+img::selection, 
+div::selection{
+  color: black;
+  background-color: #ff9191;
+} 
+
+body{
+  height: 12000px;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* 공통 */
+section{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 100px 75px;
+  background-color: white;
+}
+h1{
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.section_text{
+  width: 100%;
+  height: 100%;
+}
+.section_text h1{
+  font-size: 55px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.section_text h2{
+  font-size: 18px;
+  font-weight: 400;
+}
+.section_text h3{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -.2px;
+  margin-bottom: 14px;
+}
+.section_text p{
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  letter-spacing: -.2px;
+  margin-bottom: 28px;
+}
+.section_text .box_wrap{
+  display: flex;
+  margin-bottom: 28px;
+}
+.section_text .color_box{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #707070;
+  margin-right: 20px;
+}
+.section_text .btn_wrap{
+  display: flex;
+}
+.section_text .btn_wrap>a{
+  width: 180px;
+  height: 44px;
+  background-color: #FFFFFF;
+  border: 1px solid #707070;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -.2px;
+  transition: .3s;
+  margin-right: 20px;
+}
+.section_text .btn_wrap a:hover{
+  color: white;
+  background-color: #333333;
+}
+.section_text .tool{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_text .tool h3{
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+.section_text .img_group{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section_text .img_wrap{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.section_text .img_wrap img{
+  width: 100%;
+  height: 100%;
+}
+
+.mockup{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mockup img{
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 인디케이터 */
+.indicator{
+  z-index: 11;
+  position: fixed;
+  top: 30px;
+  right: 75px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+.indicator .indi{
+  margin-left: 18px;
+  cursor: pointer;
+}
+.indicator .indi .text{
+  font-size: 12px;
+  font-weight: 500;
+  color: #333333;
+}
+.indicator .indi .line{
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #FFBA91;
+}
+
+/* 섹션1 */
+.section1{
+  z-index: 10;
+}
+.section1 .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section1 .title h1{
+  text-align: center;
+}
+.section1 .bg_title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section1 .bg_title p{
+  font-family: 'PyeongChangPeace-Light';
+  font-size: 120px;
+  color: #FFBA91;
+}
+.section1 .guide{
+  position: absolute;
+  top: calc(100% - 100px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section1 .guide p{
+  font-size: 14px;
+  letter-spacing: -.2px;
+  margin-bottom: 5px;
+}
+.section1 .guide .fitst{
+  animation: arrow 1.1s 0s infinite linear;
+}
+.section1 .guide .second{
+  animation: arrow 1.1s .1s infinite linear;
+}
+.section1 .guide img{
+  width: auto;
+}
+
+@keyframes arrow{
+  0%{top: 0;}
+  50%{top: 12px; opacity: 0;}
+  100%{top: 0; opacity: 0;}
+}
+.section1 .guide_text{
+  position: absolute;
+  bottom: 100px;
+  left: calc(100% - 414.71px);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.section1 .text{
+  position: absolute;
+  bottom: 100px;
+  left: 75px;
+}
+.section1 .text h2{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.section1 .text p{
+  font-size: 16px;
+  font-weight: 400;
+}
+.section1 .text span{
+  font-weight: 500;
+}
+.section1 .text a{
+  text-decoration: underline;
+}
+
+/* 섹션2 */
+.section2{
+  z-index: 9;
+}
+.section2 .bg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 100%;
+  display: flex;
+}
+.section2 .bg .item{
+  width: 33.3%;
+  height: 100%;
+}
+.section2 .bg .red{background-color: #A41A31;}
+.section2 .bg .white{background-color: #FFFFFF; border-bottom: 1px solid #ebebeb;}
+.section2 .bg .blue{background-color: #202249;}
+
+.section2 .box1{background-color: #202249;}
+.section2 .box2{background-color: #D0D0D0;}
+.section2 .box3{background-color: #FFFFFF;}
+
+.section2 .tool{
+  left: 0;
+}
+.section2 .mockup{
+  width: 800px;
+  height: 700px;
+  right: 75px;
+}
+
+/* 섹션3 */
+.section3{
+  z-index: 8;
+}
+.section3 .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1400px;
+  height: 100%;
+}
+.section3 .bg img{
+  width: 100%;
+  height: 100%;
+}
+.section3 .section_text{
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.section3 .color_box{
+  margin-right: 0;
+  margin-left: 20px;
+}
+.section3 .btn_wrap>a{
+  margin: 0;
+}
+.section3 .tool{
+  right: 0;
+}
+
+.section3 .box3{background-color: black;}
+.section3 .box2{background-color: #D1BFA0;}
+.section3 .box1{background-color: #FFFFFF;}
+
+.section3 .mockup{
+  width: 900px;
+  height: 580px;
+  position: absolute;
+  top: 57%;
+  left: 200px;
+}
+.section3 .deco{
+  width: 525px;
+  height: 525px;
+  position: absolute;
+  top: -80px;
+  left: 75px;
+}
+
+/* 섹션4 */
+.section4{
+  z-index: 7;
+}
+.section4 .bg{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(0, -50%);
+}
+.section4 .bg .item{
+  width: 511.2px;
+  height: 480px;
+}
+.section4 .item img{
+  width: 100%;
+}
+
+.section4 .box1{background-color: black;}
+.section4 .box2{background-color: #E22D00;}
+.section4 .box3{background-color: #FFFFFF;}
+
+.section4 .tool{
+  left: 0;
+}
+.section4 .mockup{
+  width: 868px;
+  height: 708px;
+  right: 75px;
+}
+
+/* 섹션5 */
+.section5{
+  z-index: 6;
+}
+.section5 .bg{
+  position: absolute;
+  top: 0;
+  left: 75px;
+  width: 727px;
+  height: 621px;
+}
+.section5 .bg img{
+  width: 100%;
+  height: 100%;
+}
+.section5 .section_text{
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.section5 .color_box{
+  margin-right: 0;
+  margin-left: 20px;
+}
+.section5 .btn_wrap>a{
+  margin: 0;
+}
+.section5 .tool{
+  right: 0;
+}
+
+.section5 .box3{background-color: black;}
+.section5 .box2{background-color: #23B4B7;}
+.section5 .box1{background-color: #FFFFFF;}
+
+.section5 .mockup{
+  width: 1264px;
+  height: 100%;
+  position: absolute;
+  bottom:0;
+  left: 120px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* 섹션4 */
+.section6{
+  z-index: 5;
+}
+
+.section6 .tool{
+  left: 0;
+}
+.section6 .mockup{
+  width: 1413px;
+  height: 928px;
+  right: 0px;
+}
+
+.section6 .deco{
+  position: absolute;
+  bottom: 60px;
+  right: 250px;
+  width: 402px;
+  height: 268px;
+}
+
+/* 섹션7 */
+.section7{
+  z-index: 4;
+}
+.section7 .section_text{
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.section7 .color_box{
+  margin-right: 0;
+  margin-left: 20px;
+}
+.section7 .btn_wrap>a{
+  margin: 0;
+}
+.section7 .tool{
+  right: 0;
+}
+.section7 .mockup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 1500px;
+  height: 100%;
+}
+.section7 .mockup img{
+  width: 100%;
+  height: 100%;
+}
+
+/* 섹션8 */
+.section8{
+  z-index: 3;
+}
+.section8 .slider1{
+  width: 100%;
+  /* border: 1px solid black; */
+  margin: auto;
+}
+.section8 .slider1 .item{
+  height: 60vh;
+}
+.section8 .item img{
+  height: 100%;
+  object-fit: contain;
+}
+.section8 .section_text{
+  height: auto;
+}
+.section8 .owl-nav{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.section8 .owl-nav button{
+  width: 24px; 
+  height: 24px;
+  position: absolute;
+}
+.section8 .owl-nav button span{display: none;}
+.section8 .owl-nav button.owl-prev{
+  background: url(img/arrow-left.png) no-repeat center center !important;
+  left: -30px;
+}
+.section8 .owl-nav button.owl-next{
+  background: url(img/arrow-right.png) no-repeat center center !important;
+  right: -30px;
+}
+.section8 .owl-dots{
+  width: 150px; height: 30px;
+  position: absolute;
+  bottom: -40px;left: 50%;
+  transform: translate(-50%, 0);
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section8 .owl-dots .owl-dot{
+  margin: 0 10px;
+}
+.section8 .owl-dots .owl-dot span{
+  display: block;
+  width: 8px; height: 8px;
+  background-color: #7d7d7d;
+  border-radius: 50%;
+  border: none;
+}
+.section8 .owl-dots .owl-dot.active span{
+  display: block;
+  width: 10px; height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/* 섹션9 */
+.section9{
+  z-index: 2;
+}
+.section9 .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section9 .title h1{
+  text-align: center;
+}
+.section9 .bg_title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.section9 .bg_title p{
+  font-family: 'PyeongChangPeace-Light';
+  font-size: 120px;
+  color: #FFBA91;
+  text-align: center;
+}
+.section9 .carrot{
+  width: 262px;
+  height: 268px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  position: absolute;
+  top: calc(50% - 268px);
+  left: 75px;
+}
+.section9 .carrot p{
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFBA91;
+}
+.section9 .carrot img{
+  width: 100%;
+}
